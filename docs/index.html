@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta encording="utf-8">
+        <title>波紋</title>
+        <link rel="main.css">
+        <script type="text/javascript" src="./socket.io/socket.io.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                width:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let socket = io.connect();
+            //socket.emit("tap",{});
+            socket.on("tap",data=>{
+                
+            });
+        </script>
+    </body>
+</html>
