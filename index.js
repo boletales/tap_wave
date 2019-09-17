@@ -11,6 +11,12 @@ eventEmitter.setMaxListeners(40);
 app.get('/',function(req,res){
     res.sendFile(__dirname+'/docs/index.html');
 });
+app.get('/main.js',function(req,res){
+    res.sendFile(__dirname+'/docs/main.js');
+});
+app.get('/main.css',function(req,res){
+    res.sendFile(__dirname+'/docs/main.css');
+});
 io.on('connection',function(socket){
     socket.on('tap',function(data){
         io.emit("tap",data);

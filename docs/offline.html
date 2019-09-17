@@ -16,14 +16,8 @@
         <canvas id="canvas" height="1000px" width="1000px"></canvas>
         <script src="main.js"></script>
         <script>
-            let socket = io.connect();
-            let hue = Math.random()*360;
-            socket.on("tap",data=>{
-                taps.push(data);
-            });
-
             canvas.onclick=function(e){
-                socket.emit("tap",genTap(e.clientX - canvas.offsetLeft,e.clientY - canvas.offsetTop,hue));
+                taps.push(genTap(e.clientX - canvas.offsetLeft,e.clientY - canvas.offsetTop,Math.random()*360));
             };
         </script>
     </body>
